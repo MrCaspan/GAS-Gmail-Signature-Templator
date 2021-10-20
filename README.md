@@ -10,7 +10,7 @@ This script require the use of the OoAuth2 library by Google. Make sure you add 
 
 oAuth2 Library ID - Librar1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF - Version 41
 
-If ther eis a newer verison available you are welcome to use it but I have only tested with verison 41 of the Library
+If there is a newer verison available you are welcome to use it but I have only tested with verison 41 of the Library
 
-Here is the document on it
+Here is the documentation on it the library:
 https://github.com/googleworkspace/apps-script-oauth2
