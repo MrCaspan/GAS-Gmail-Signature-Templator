@@ -1,12 +1,16 @@
 # GAS-Gmail-Signature-Templator
-This script will allow you to use a service account to set a defaut signature on all selected users
+This script will allow you to use a Google Cloud Project service account to set a default signature on all selected users using a Google App Script
 
-Please note this script is not just a drop in place, set a couple of variables and click run to start using it. The script requires custom attributes get created for your Google Worksapce users so that you can specify your setting on each user insted of creating a Google Sheet to manage all your users and settings.
+Please note this script is not just a drop in place, set a couple of variables and click run to start using it. The script requires that custom attributes get created for your Google Workspace users so that you can specify your setting on each user insted of creating a Google Sheet to manage all your users and settings.
 
-Please see my blog at https://caspan.com/2021/10/google-app-script-set-gmail-signature-template-on-org-users/ for detials on setting up the Google Active Script Project & Google Cloud Project and any other prerequisites.
+Please see my blog at https://caspan.com/2021/10/google-app-script-set-gmail-signature-template-on-org-users/ for details on setting up the Google Active Script Project & Google Cloud Project and any other prerequisites.
 
-This script require the user of the OoAuth2 library by Google so make sure you add this library to you Google App Script library
-1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF 
+#Addon libraries
+This script require the use of the OoAuth2 library by Google. Make sure you add this library to you Google App Script library
+
+oAuth2 Library ID - Librar1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF - Version 41
+
+If ther eis a newer verison available you are welcome to use it but I have only tested with verison 41 of the Library
 
 Here is the document on it
 https://github.com/googleworkspace/apps-script-oauth2
