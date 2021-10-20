@@ -5,7 +5,7 @@ Please note this script is not just a drop in place, set a couple of variables a
 
 Please see my blog at https://caspan.com/2021/10/google-app-script-set-gmail-signature-template-on-org-users/ for details on setting up the Google Active Script Project & Google Cloud Project and any other prerequisites.
 
-#Addon libraries
+# Addon libraries
 This script require the use of the OoAuth2 library by Google. Make sure you add this library to you Google App Script library
 
 oAuth2 Library ID - Librar1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF - Version 41
