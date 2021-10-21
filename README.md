@@ -1,7 +1,7 @@
 # GAS-Gmail-Signature-Templator
 This script will allow you to use a Google Cloud Project service account to set a default signature on all selected users using a Google App Script
 
-Please note this script is not just a drop in place, set a couple of variables and click run to start using it. The script requires that custom attributes get created for your Google Workspace users so that you can specify your setting on each user insted of creating a Google Sheet to manage all your users and settings.
+Please note this script is not just a drop in place, set a couple of variables to start using it. The script requires that custom attributes (https://support.google.com/a/answer/6208725?hl=en) get created for your Google Workspace enviroment so that you can specify your setting on each user insted of creating a Google Sheet to manage all your users and settings.
 
 Please see my blog at https://caspan.com/2021/10/google-app-script-set-gmail-signature-template-on-org-users/ for details on setting up the Google Active Script Project & Google Cloud Project and any other prerequisites.
 
