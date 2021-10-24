@@ -35,7 +35,6 @@ function setSignature_(email, signature) {
     fail; // There is no such thing as fail so this will hault our script
   }
  
-  // Doc - 
   var url   = `https://gmail.googleapis.com/gmail/v1/users/${email}/settings/sendAs/${email}`;
  
   const payload = JSON.stringify({
