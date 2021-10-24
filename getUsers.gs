@@ -43,7 +43,7 @@ function getUsers_(domain, impersonateAccount) {
     muteHttpExceptions: true
   };
  
-  var response = UrlFetchApp.fetch(url, options);
+  const response = UrlFetchApp.fetch(url, options);
   if (response.getResponseCode() != 200) {
     Logger.log(response);
     service.reset();
@@ -51,11 +51,11 @@ function getUsers_(domain, impersonateAccount) {
     }
  
   // Turn the response into an object
-  var response = JSON.parse(response);
+  const responseObj = JSON.parse(response);
   
   // Make an object that has propteries that are the users email address
   // and the value be the users data to make it easier to access
-  for (const user of response.users) {
+  for (const user of responseObj.users) {
 
     // Start building an user object    
     users[user.primaryEmail] = new buildUser_(user);
