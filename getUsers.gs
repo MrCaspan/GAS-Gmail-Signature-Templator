@@ -34,7 +34,7 @@ function getUsers_(domain, impersonateAccount) {
             '?domain=' + domain + // Set this to the domain to get users
             '&maxResults=500' +   // This is the Max number of results to return
             '&projection=full' +  // Include all fields associated with this user.
-            '&query=Gmail_Signature%2EEnforce_Default_Signature%3Dtrue';  // Make to URL Encode your query
+            '&query=Gmail_Signature%2EEnforce_Default_Signature%3Dtrue';  // Make sure to URL Encode your query
  
   const options = {
     method: 'GET',
