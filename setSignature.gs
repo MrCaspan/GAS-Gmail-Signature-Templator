@@ -28,7 +28,7 @@ function setSignature_(email, signature) {
  
   Logger.log(`Setting signature for ${email}...`);
  
-  var service = getService_(`GoogleDrive: ${email}`, 'https://www.googleapis.com/auth/gmail.settings.basic', email);
+  const service = getService_(`GoogleDrive: ${email}`, 'https://www.googleapis.com/auth/gmail.settings.basic', email);
   if (!service.hasAccess()) {
     Logger.log('There was a service error:' + service.getLastError());
     service.reset();
