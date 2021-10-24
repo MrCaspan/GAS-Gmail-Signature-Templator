@@ -35,7 +35,7 @@ function setSignature_(email, signature) {
     fail; // There is no such thing as fail so this will hault our script
   }
  
-  var url   = `https://gmail.googleapis.com/gmail/v1/users/${email}/settings/sendAs/${email}`;
+  const url = `https://gmail.googleapis.com/gmail/v1/users/${email}/settings/sendAs/${email}`;
  
   const payload = JSON.stringify({
     "sendAsEmail"       : email,
@@ -52,8 +52,12 @@ function setSignature_(email, signature) {
     payload             : payload
   }
  
-  var response = UrlFetchApp.fetch(url, options);
-  if (response.getResponseCode() != 200) {Logger.log(response);fail;}
+  const response = UrlFetchApp.fetch(url, options);
+  if (response.getResponseCode() != 200) {
+    Logger.log(response);
+    service.reset();
+    fail;
+  }
  
   // Clean up the serivce and tokens
   service.reset();
