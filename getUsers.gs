@@ -28,7 +28,11 @@ function getUsers_(domain, impersonateAccount) {
   Logger.log(`Getting users for the domain ${domain}...`);
  
   const service = getService_('AdminSKD-Directory', 'https://www.googleapis.com/auth/admin.directory.user.readonly', impersonateAccount);
-  if (!service.hasAccess()) {Logger.log('There was a service error:' + service.getLastError());return;fail;}
+  if (!service.hasAccess()) {
+    Logger.log('There was a service error:' + service.getLastError());
+    service.reset();
+    fail; // There is no such thing as fail so this will hault our script
+  }
  
   const url = 'https://admin.googleapis.com/admin/directory/v1/users' +
             '?domain=' + domain + // Set this to the domain to get users
@@ -48,7 +52,7 @@ function getUsers_(domain, impersonateAccount) {
     Logger.log(response);
     service.reset();
     fail; // There is no such thing as fail so this will hault our script
-    }
+  }
  
   // Turn the response into an object
   const responseObj = JSON.parse(response);
