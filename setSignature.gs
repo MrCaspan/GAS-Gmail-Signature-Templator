@@ -56,7 +56,7 @@ function setSignature_(email, signature) {
   if (response.getResponseCode() != 200) {
     Logger.log(response);
     service.reset();
-    fail;
+    fail; // There is no such thing as fail so this will hault our script
   }
  
   // Clean up the serivce and tokens
