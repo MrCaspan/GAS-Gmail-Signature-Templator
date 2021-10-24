@@ -23,7 +23,7 @@
  */
 function getUsers_(domain, impersonateAccount) {
   
-  var users = {};
+  let users = {};
 
   Logger.log(`Getting users for the domain ${domain}...`);
  
