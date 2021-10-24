@@ -96,7 +96,8 @@ function loadTemplate_(fileID) {
 
   }catch(e){
 
-    Logger.log('The file ID is not a valid file or you dont have permissions to it' + e);fail;
+    Logger.log('The file ID is not a valid file or you dont have permissions to it' + e);
+    fail;  // There is no such thing as fail so this will hault our script
 
   }
 
