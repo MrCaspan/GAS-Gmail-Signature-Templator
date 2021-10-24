@@ -30,7 +30,7 @@ function getUsers_(domain, impersonateAccount) {
   const service = getService_('AdminSKD-Directory', 'https://www.googleapis.com/auth/admin.directory.user.readonly', impersonateAccount);
   if (!service.hasAccess()) {Logger.log('There was a service error:' + service.getLastError());return;fail;}
  
-  var url = 'https://admin.googleapis.com/admin/directory/v1/users' +
+  const url = 'https://admin.googleapis.com/admin/directory/v1/users' +
             '?domain=' + domain + // Set this to the domain to get users
             '&maxResults=500' +   // This is the Max number of results to return
             '&projection=full' +  // Include all fields associated with this user.
