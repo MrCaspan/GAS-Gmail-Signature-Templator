@@ -59,11 +59,15 @@ function getUsers_(domain, impersonateAccount) {
   
   // Make an object that has propteries that are the users email address
   // and the value be the users data to make it easier to access
-  for (const user of responseObj.users) {
+ for (const user of responseObj.users) {
+    const photos = getProfilePicture_(user.id, impersonateAccount);
 
     // Start building an user object    
-    users[user.primaryEmail] = new buildUser_(user);
-
+    users[user.primaryEmail] = new buildUser_({...user, photos: photos});
+    
+    Utilities.sleep(1000)
+    // The People API has a default quota limit of 90 requests per user per minute
+    // Pausing the script for 1 second after each request should cap us at 60 requests per minute
   }
 
   Logger.log('Complete');
