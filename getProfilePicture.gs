@@ -45,6 +45,6 @@ function getProfilePicture_(id, impersonateAccount) {
   const responseObj = JSON.parse(response);
   // Turn the response into an object
 
-  // Return the public profile image URL
+  // Return the photos object
   return responseObj.photos ? responseObj.photos : null
 }
