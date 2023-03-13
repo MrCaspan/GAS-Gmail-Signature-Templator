@@ -136,9 +136,11 @@ function loadConfig_() {
  * @param {object} schema This object will hold the schema data for the user
  */
 function buildUser_(schema) {
+  const fallbackImageURL = 'Paste your fallback image url here'
 
   // Take the phone schema and build an object
   const phones = new createPhoneObj_(schema.phones);
+
 
   this['{FirstName}']      = schema.name?.givenName; 
   this['{LastName}']       = schema.name?.familyName;
@@ -148,6 +150,7 @@ function buildUser_(schema) {
   this['{MobileNumber}']   = 'mobile' in phones ? phones['mobile']  : '';
   this['{Certs}']          = schema.customSchemas.Gmail_Signature?.Certifications;
   this['CustomTemplateID'] = schema.customSchemas.Gmail_Signature?.Custom_Template_ID;
+  this['{photoURL}']       = schema.photos?.[0]?.url ? schema.photos[0].url : fallbackImageURL;
 
   // if the schema value exists
   if (schema.customSchemas.Gmail_Signature?.Exclude_Mobile) {
